@@ -35,5 +35,5 @@ class Employee(models.Model):
 
 class Checkin(models.Model):
     contact_id = models.ForeignKey('Contact', on_delete=models.CASCADE)
-    employee_id = models.ForeignKey('Employee', on_delete=models.SET_NULL)
+    employee_id = models.ForeignKey('Employee', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
